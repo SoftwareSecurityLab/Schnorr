@@ -4,7 +4,7 @@
   "description": "Simple and basic non-interactive version of original Schnorr protocol.",
   "main": "schnorr.js",
   "scripts": {
-    "test": "test"
+    "doc": "jsdoc -c ./config/jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://gitlab.com/Dr.Milad2golnia/basic-schnorr-nizkp/issues"
   },
-  "homepage": "https://gitlab.com/Dr.Milad2golnia/basic-schnorr-nizkp#readme"
+  "homepage": "https://gitlab.com/Dr.Milad2golnia/basic-schnorr-nizkp#readme",
+  "devDependencies": {
+    "jsdoc": "^3.6.7"
+  },
+  "dependencies": {
+    "big-integer": "^1.6.48",
+    "debug": "^4.3.1"
+  }
 }
