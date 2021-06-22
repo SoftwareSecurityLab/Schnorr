@@ -4,6 +4,7 @@
  */
 const bigInteger = require('big-integer');
 const debug = require('debug');
+const ElGamal = require('basic_simple_elgamal');
 
 
 const log = debug('NIZKP::Schnorr');
@@ -16,7 +17,7 @@ const log = debug('NIZKP::Schnorr');
  */
 class prover{
     /**
-     * Initialize the underlying 
+     * Initialize the underlying multiplicative group
      * @param {bigInteger|string} g - The generator of multiplicative group.
      * @param {bigInteger|string} p - The modulus of multiplicative group.
      * @throws Will throw an Error if one of 'g' or 'p' is string but it's not a valid integer.
@@ -62,6 +63,8 @@ class prover{
             log('Error: modulus is not a string nor a big integer:', g);
             throw new Error('Wrong type of modulus! it\'s must be either a string or a big integer');
         }
+
+        this.elgamal = new ElGamal;
     }
 
     /**
@@ -70,6 +73,7 @@ class prover{
      * @returns {string} - the resulted schnorr proof.
      */
     prove(r){
+
         return ;
     }
 }

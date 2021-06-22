@@ -25,6 +25,7 @@
     "jsdoc": "^3.6.7"
   },
   "dependencies": {
+    "basic_simple_elgamal": "^1.1.0",
     "big-integer": "^1.6.48",
     "debug": "^4.3.1"
   }
