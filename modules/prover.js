@@ -100,7 +100,7 @@ class Prover{
          */
         let response = this.elgamal.add(commitment, this.elgamal.multiply(nrc.negate(), r));
         return {
-            commitment,
+            commitment: t,
             response
         };
     }
