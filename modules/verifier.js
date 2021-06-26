@@ -1,0 +1,4 @@
+/**
+ * Verifier module
+ * @module ./verifier
+ */
