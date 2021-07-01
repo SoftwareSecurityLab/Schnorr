@@ -5,7 +5,7 @@
 const Prover = require('./modules/prover');
 const Verifier = require('./modules/verifier');
 const bigInteger = require('big-integer');
-const log = require('debug');
+const debug = require('debug');
 const ElGamal = require('basic_simple_elgamal');
 
 
@@ -16,6 +16,9 @@ const ElGamal = require('basic_simple_elgamal');
  * @property {bigInteger.BigInteger|string} response - The response which contains the secret 
  * knowledge r and is used to prove the knowledge of secret.
  */
+
+
+const log = debug('app::NIZKP::Schnorr');
 
 
 /**
@@ -104,3 +107,11 @@ class Schnorr{
     } 
 
 }
+
+
+
+/**
+ * Schnorr class
+ */
+
+module.exports = Schnorr;

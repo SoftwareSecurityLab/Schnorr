@@ -5,6 +5,7 @@
 const bigInteger = require('big-integer');
 const ElGamal = require('basic_simple_elgamal');
 const crypto = require('crypto');
+const debug = require('debug');
 
 
 /**
@@ -32,6 +33,7 @@ const crypto = require('crypto');
 
 
 const hash = crypto.createHash('SHA3-512');
+const log = debug('app::NIZKP::Schnorr::Verifier')
 
 
 /**
@@ -74,7 +76,11 @@ class Verifier{
         /**
          * Reproduced challenge:
          */
-        let c = hash.digest('hex');
+        let h = hash.digest('hex');
+        /**
+         * convert hash to a big-integer:
+         */
+        let c = bigInteger(h, 16);
 
         /**
          * g^s:

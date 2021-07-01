@@ -8,7 +8,7 @@ const ElGamal = require('basic_simple_elgamal');
 const crypto = require('crypto');
 
 
-const log = debug('NIZKP::Schnorr');
+const log = debug('app::NIZKP::Schnorr::Prover');
 const hash = crypto.createHash('SHA3-512');
 
 
@@ -81,6 +81,7 @@ class Prover{
             toProve = x;
         else
             toProve = this.elgamal.power(secretKnowledge);
+            
         hash.update(this.elgamal.generator);
         hash.update(toProve.toString());
         hash.update(t.toString());
@@ -94,11 +95,12 @@ class Prover{
          * Numerical representation of digest hash 'c':
          */
         let nrc = bigInteger(c, 16);
-
+        
         /**
-         * Response:
+         * Response: 
          */
-        let response = this.elgamal.add(commitment, this.elgamal.multiply(nrc.negate(), r));
+        let response = commitment.add(nrc.negate().multiply(r));
+        
         return {
             commitment: t,
             response
