@@ -18,8 +18,8 @@ const hash = crypto.createHash('SHA3-512');
 /**
  * @typedef {Object} ElGamalInfo the object containing essential information to build the ElGamal
  *  cryptoengine again
- * @property {bigInteger.BigInteger} p - The modulus of underlying group and determine the whole Cyclic group
- * @property {bigInteger.BigInteger} g - The generator of underlying group.
+ * @property {bigInteger.BigInteger|string} p - The modulus of underlying group and determine the whole Cyclic group
+ * @property {bigInteger.BigInteger|string} g - The generator of underlying group.
  * @property {bigInteger} [y] - The public key which is your public key and others can use it to 
  * encrypt messages for you.
  * @property {bigInteger} [x] - The private key(decryption key) which is strongly recommended to don't export it
@@ -49,7 +49,7 @@ class Prover{
      */
     constructor(elgamalInfo){
         /**
-         * @property {ElGamal} - The underlying engine to prove the knowledge using it. 
+         * @property {ElGamal} elgamal - The underlying engine to prove the knowledge using it. 
          */
         this.elgamal = new ElGamal(elgamalInfo.p, elgamalInfo.g);
     }
