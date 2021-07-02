@@ -99,7 +99,7 @@ class Prover{
         /**
          * Response: 
          */
-        let response = commitment.add(nrc.negate().multiply(r));
+        let response = commitment.add(nrc.negate().multiply(r)).mod(this.elgamal.groupOrder);
         
         return {
             commitment: t,
