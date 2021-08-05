@@ -35,7 +35,7 @@ class Schnorr{
      * computations. you can initialize schnorr by passing an instance of you ElGamal engine if
      * you have one or initialize with the Modulus and generator separately
      * @param {ElGamal|string|bigInteger.BigInteger} p - The ElGamal engine or the modulus of the
-     * multiplicative group, if you pass ElGamal engine then you can leave the q as undefined.   
+     * multiplicative group, if you pass ElGamal engine then you can leave the g as undefined.   
      * @param {string|bigInteger.BigInteger} [g] - The generator of the underlying multiplicative group.
      * @throws Will throw an error if wrong type of arguments is passed.
      */
