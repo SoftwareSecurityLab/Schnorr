@@ -82,7 +82,7 @@ class Schnorr{
 
 
     /**
-     * Prove the secret "r" to verifier, to be more accurate, you prove that y = g^r without 
+     * Prove the secret "r" to verifier, to be more accurate, you prove that x = g^r without 
      * revealing the secret "r".
      * @param {bigInteger.BigInteger|string} r - The secret knowledge which you want to prove. 
      * @param {bigInteger.BigInteger|string} [x] - The public info which is g^r
