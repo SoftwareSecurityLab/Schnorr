@@ -148,16 +148,12 @@ This work is published under [ISC][isc] license.
 [np]: https://www.npmjs.com/
 [nj]: https://nodejs.org/en/
 [by]: https://browserify.org/
-
-[ourelg]: https:
-
+[ourelg]: https://www.npmjs.com/package/basic_simple_elgamal
 [bi]: https://www.npmjs.com/package/big-integer
 [eg]: https://en.wikipedia.org/wiki/ElGamal_encryption
 [mg]: https://en.wikipedia.org/wiki/Multiplicative_group
 [example]: ./tests/main.js
-
-[gitpage]: https://
-
+[gitpage]: https://github.com/SoftwareSecurityLab/Schnorr
 [softsl]: https://github.com/SoftwareSecurityLab
 [tmail]: mailto:maryam.mouzarani@gmail.com
 [isc]: ./LICENSE
