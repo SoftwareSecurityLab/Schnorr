@@ -14,7 +14,8 @@
 
 # Schnorr NIZKP
 
-The non-interactive version of [original Schnorr zero-knowledge proof][sh]. This project is purposed to be used with public key cryptosystem based on "Discrete Logarithm" such as ElGamal.
+The non-interactive version of [original Schnorr zero-knowledge proof][sh].  
+This project is purposed to be used with public key cryptosystem based on "Discrete Logarithm" such as ElGamal.
 
 > Reminder: By having `r` as your secret, `g` as generator and `x` as g<sup>r</sup> = x and by assuming that verfiers knows both `x` and `g`, you want to prove that you know value of x without revealing it.
 
@@ -25,7 +26,7 @@ The [Fiat-Shamir heuristic][fsh] is applied to Schnorr protocol to make it non-i
 You should first initialize the module with a [Cyclic Group][cg] then it's ready.  
 This module works over [Multiplicative Group][mg] of integers as underlying [Cyclic Group][cg].
 
-**NOTE:** The Module is developed for educational goals, although we developed it securely but the risk of using it in production environment is on you!
+**NOTE:** This Module is developed for educational goals, although we developed it securely but the risk of using it in production environment is on you!
 
 
 
@@ -101,7 +102,7 @@ Use this method to Proves your knowledge about secret `r`.
 `r` parameter is your secret!   
 `x` parameter is the info which you wants to prove your knowledge about it. In simple words, `x` is result of following modular exponentiation:   
 `g`<sup>`r`</sup>` mod p = x`   
-As you can see, `x` is optional. If you leave it undefined then we computes it internally.
+As you can see, `x` is optional. If you leave it `undefined` then we computes it internally.
 
 Throws an error if `r` is not provided or is of wrong type.
 
