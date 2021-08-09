@@ -9,7 +9,6 @@
 - [Example](#example)
 - [Contributing](#contributing)
 - [Support](#support)
-- [Authors and acknowledgment](#authors-and-acknowledgment)
 - [License](#license)
 
 # Schnorr NIZKP
@@ -130,12 +129,6 @@ Also you can open issues first then we can discuss about it.
 
 # Support
 If you need help you can either open an issue in [GitHub page][gitpage] or contact the developers by mailing to golgolniamilad@gmail.com
-
-# Authors and acknowledgment
-I'm so grateful to [Dr.Maryam Mouzarani][tmail] who was directing this project fully from guidance to contribution.
-
-In simple words:
-> If there wasn't her helps and guidances it was impossible to develop this module.
 
 # License
 This work is published under [ISC][isc] license.
