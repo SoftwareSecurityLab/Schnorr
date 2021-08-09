@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/Dr.Milad2golnia/basic-schnorr-nizkp.git"
+    "url": "git+https://github.com/SoftwareSecurityLab/Schnorr.git"
   },
   "keywords": [
     "Schnorr",
@@ -18,9 +18,9 @@
   "author": "Golgolnia milad",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/Dr.Milad2golnia/basic-schnorr-nizkp/issues"
+    "url": "https://github.com/SoftwareSecurityLab/Schnorr/issues"
   },
-  "homepage": "https://gitlab.com/Dr.Milad2golnia/basic-schnorr-nizkp#readme",
+  "homepage": "https://github.com/SoftwareSecurityLab/Schnorr#readme",
   "devDependencies": {
     "jsdoc": "^3.6.7"
   },
