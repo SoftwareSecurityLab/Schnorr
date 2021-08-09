@@ -28,7 +28,7 @@ This module works over [Multiplicative Group][mg] of integers as underlying [Cyc
 **NOTE:** The Module is developed for educational goals, although we developed it securely but the risk of using it in production environment is on you!
 
 
->
+
 # Installation
 
 Either you are using [Node.js][nj] or a browser, you can use it locally by downloading it from [npm][np]: 
@@ -100,7 +100,7 @@ Use this method to Proves your knowledge about secret `r`.
 
 `r` parameter is your secret!   
 `x` parameter is the info which you wants to prove your knowledge about it. In simple words, `x` is result of following modular exponentiation:   
-`g`<sup>`r`</sup>` = x`   
+`g`<sup>`r`</sup>` mod p = x`   
 As you can see, `x` is optional. If you leave it undefined then we computes it internally.
 
 Throws an error if `r` is not provided or is of wrong type.
@@ -111,7 +111,6 @@ Throws an error if `r` is not provided or is of wrong type.
 * **`x`:** `String` | [`big-integer`][bi]
 * **`proof`:** Schnorr Proof
 * **Returns:** boolean
-* **Async**
 
 Verifies the knowledge of prover about secret of `x` considering the given `proof`
 
