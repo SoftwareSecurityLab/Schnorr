@@ -6,10 +6,16 @@ const bigInteger = require('big-integer');
 const debug = require('debug');
 const ElGamal = require('basic_simple_elgamal');
 const crypto = require('crypto');
+const jsHash = require('js-sha3');
 
 
 const log = debug('app::NIZKP::Schnorr::Prover');
-const hash = crypto.createHash('SHA3-512');
+let hash = undefined;
+if(typeof process !== 'object' || typeof require !== 'function' || typeof module !== 'object'){
+    hash = jsHash.sha3_512.create();
+    hash.digest = hash.hex;
+}else
+    hash = crypto.createHash('SHA3-512');
 
 
 /**
