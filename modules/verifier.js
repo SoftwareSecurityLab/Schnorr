@@ -35,7 +35,8 @@ const jsHash = require('js-sha3');
 
 const log = debug('app::NIZKP::Schnorr::Verifier');
 let hash = undefined;
-if(typeof process !== 'object' || typeof require !== 'function' || typeof module !== 'object'){
+if(typeof process !== 'object' || typeof require !== 'function' 
+    || typeof module !== 'object' || typeof global !== 'object'){
     hash = jsHash.sha3_512.create();
     hash.digest = hash.hex;
 }else
