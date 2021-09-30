@@ -1,6 +1,6 @@
 {
   "name": "@software-security-lab/schnorr",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple and basic non-interactive version of original Schnorr protocol.",
   "main": "schnorr.js",
   "scripts": {
