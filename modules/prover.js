@@ -11,12 +11,12 @@ const jsHash = require('js-sha3');
 
 const log = debug('app::NIZKP::Schnorr::Prover');
 let hash = undefined;
-if(typeof process !== 'object' || typeof require !== 'function' 
-    || typeof module !== 'object' || typeof global !== 'object'){
+if(global?.performance?.nodeTiming?.name)
+    hash = crypto.createHash('SHA3-512');
+else{
     hash = jsHash.sha3_512.create();
     hash.digest = hash.hex;
-}else
-    hash = crypto.createHash('SHA3-512');
+}
 
 
 /**
