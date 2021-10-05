@@ -34,13 +34,7 @@ const jsHash = require('js-sha3');
 
 
 const log = debug('app::NIZKP::Schnorr::Verifier');
-let hash = undefined;
-if(global?.performance?.nodeTiming?.name)
-    hash = crypto.createHash('SHA3-512');
-else{
-    hash = jsHash.sha3_512.create();
-    hash.digest = hash.hex;
-}
+
 
 
 /**
@@ -69,6 +63,15 @@ class Verifier{
      * @returns {boolean} Returns true if NIZK Schnorr proof verified and false otherwise
      */
     verify(toVerify, proof){
+
+        let hash = undefined;
+        if(global?.performance?.nodeTiming?.name)
+            hash = crypto.createHash('SHA3-512');
+        else{
+            hash = jsHash.sha3_512.create();
+            hash.digest = hash.hex;
+        }
+
         if(typeof toVerify === 'string')
             toVerify = bigInteger(toVerify);
         if(typeof proof.commitment === 'string')

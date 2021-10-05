@@ -10,13 +10,6 @@ const jsHash = require('js-sha3');
 
 
 const log = debug('app::NIZKP::Schnorr::Prover');
-let hash = undefined;
-if(global?.performance?.nodeTiming?.name)
-    hash = crypto.createHash('SHA3-512');
-else{
-    hash = jsHash.sha3_512.create();
-    hash.digest = hash.hex;
-}
 
 
 /**
@@ -70,6 +63,15 @@ class Prover{
      * @throws Will throw an error if given secret knowledge is not type of string nor big integer.
      */
     async prove(r, x){
+        
+        let hash = undefined;
+        if(global?.performance?.nodeTiming?.name)
+            hash = crypto.createHash('SHA3-512');
+        else{
+            hash = jsHash.sha3_512.create();
+            hash.digest = hash.hex;
+        }
+        
         let commitment = await this.elgamal.randomGropuMember();
         let t = this.elgamal.power(commitment);
         let secretKnowledge = undefined;
